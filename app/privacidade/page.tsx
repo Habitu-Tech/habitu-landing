@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Política de Privacidade — Habbitu",
+  title: "Política de Privacidade - Habbitu",
   description: "Como a Habbitu coleta, usa e protege seus dados pessoais.",
 }
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Termos de Uso — Habbitu",
+  title: "Termos de Uso - Habbitu",
   description: "Termos e condições de uso da plataforma Habbitu.",
 }
 
