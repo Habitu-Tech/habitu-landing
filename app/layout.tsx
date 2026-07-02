@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import { Syne, Inter } from "next/font/google"
+import Script from "next/script"
+import { GOOGLE_ADS_ID } from "@/lib/gtag"
 import "./globals.css"
 
 const syne = Syne({
@@ -39,6 +41,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR" className={`${syne.variable} ${inter.variable}`}>
       <body>{children}</body>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads-tag" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GOOGLE_ADS_ID}');
+        `}
+      </Script>
     </html>
   )
 }

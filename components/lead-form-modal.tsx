@@ -10,6 +10,7 @@ import {
   isValidBrazilPhone,
   normalizeBrazilPhone,
 } from "@/lib/whatsapp"
+import { reportLeadFormConversion } from "@/lib/gtag"
 
 function CheckCircle() {
   return (
@@ -101,6 +102,7 @@ export function LeadFormModal({
         }),
       })
       if (!response.ok) throw new Error("save-failed")
+      reportLeadFormConversion()
       setEnviado(true)
     } catch {
       setErro("Não rolou salvar agora. Tenta de novo em alguns segundos.")
