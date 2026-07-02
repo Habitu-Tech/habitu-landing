@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Syne, Inter } from "next/font/google"
 import Script from "next/script"
-import { GOOGLE_ADS_ID } from "@/lib/gtag"
+import { GOOGLE_ADS_ID, GA4_ID } from "@/lib/gtag"
 import "./globals.css"
 
 const syne = Syne({
@@ -51,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${GOOGLE_ADS_ID}');
+          gtag('config', '${GA4_ID}');
         `}
       </Script>
     </html>

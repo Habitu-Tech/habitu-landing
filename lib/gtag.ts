@@ -1,4 +1,5 @@
 export const GOOGLE_ADS_ID = "AW-17714606262"
+export const GA4_ID = "G-9W26NGRZN1"
 const LEAD_FORM_CONVERSION_LABEL = "AW-17714606262/ywUVCKbOhskcELbh_f5B"
 
 declare global {
