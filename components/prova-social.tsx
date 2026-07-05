@@ -1,8 +1,10 @@
+import Image from "next/image"
 import { DiagonalSection } from "@/components/diagonal-section"
 
 const CLIENTES = [
   {
     nome: "Oka Guaraná da Amazônia",
+    logo: "/clients/oka-guarana.jpg",
     local: "Quiosques no Amazonas Shopping e no Parque Dez, em Manaus",
     programa: "10 guaranás = 1 grátis",
     instagram: "oka.guarana",
@@ -12,6 +14,7 @@ const CLIENTES = [
   },
   {
     nome: "Geburger",
+    logo: "/clients/geburger.png",
     local: "Parque Dez de Novembro, em Manaus",
     programa: "10 carimbos = 1 Geburger grátis",
     instagram: "geburgeroficial",
@@ -34,7 +37,17 @@ export function ProvaSocial() {
       <div className="grid gap-6 sm:grid-cols-2">
         {CLIENTES.map((c) => (
           <div key={c.nome} className={`rounded-xl border ${c.borda} bg-surface p-6`}>
-            <p className={`font-display text-lg font-extrabold ${c.cor}`}>{c.nome}</p>
+            <div className="h-16 w-16 overflow-hidden rounded-lg">
+              <Image
+                src={c.logo}
+                alt={`Logo da ${c.nome}`}
+                width={64}
+                height={64}
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            <p className={`mt-4 font-display text-lg font-extrabold ${c.cor}`}>{c.nome}</p>
             <p className="mt-1 text-sm text-muted">{c.local}</p>
 
             <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-border2 px-3 py-1">

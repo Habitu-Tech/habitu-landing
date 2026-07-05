@@ -3,28 +3,38 @@ import { WhatsAppCtaButton } from "@/components/whatsapp-cta-button"
 
 const PLANOS = [
   {
+    nome: "Gratuito",
+    preco: "0",
+    beneficios: [
+      "Uma campanha de teste",
+      "Emita até 10 cartões de teste",
+      "Teste pelo tempo que precisar",
+      "Não precisa de cartão de crédito",
+    ],
+    destaque: false,
+  },
+  {
     nome: "Lite",
-    preco: "49,90",
-    cartoes: "1.000 cartões de fidelidade por mês",
+    preco: "24",
+    beneficios: [
+      "Uma campanha",
+      "Emita até 200 cartões",
+      "Envio de mensagens",
+      "Cancele quando quiser, sem multas",
+    ],
     destaque: false,
   },
   {
     nome: "Pro",
-    preco: "79,90",
-    cartoes: "5.000 cartões de fidelidade por mês",
+    preco: "49",
+    beneficios: [
+      "Uma campanha",
+      "Emita até 500 cartões",
+      "Envio de mensagens",
+      "Cancele quando quiser, sem multas",
+    ],
     destaque: true,
   },
-]
-
-const FUNCIONALIDADES = [
-  "Cartão fidelidade digital, sem app pra o cliente baixar",
-  "QR code único por cliente",
-  "Atualização do cartão em tempo real",
-  "WhatsApp automático a cada selo, prêmio e lembrete de expiração",
-  "Cores, logo e nome do prêmio com a cara do seu negócio",
-  "Painel do atendente com scanner de QR code",
-  "Histórico de visitas de cada cliente",
-  "Mais de um atendente usando o mesmo painel",
 ]
 
 function CheckIcon() {
@@ -54,11 +64,11 @@ export function Planos() {
         </p>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-3">
         {PLANOS.map((p) => (
           <div
             key={p.nome}
-            className={`relative rounded-xl border p-7 ${
+            className={`relative flex flex-col rounded-xl border p-7 ${
               p.destaque ? "border-mint bg-night shadow-mint" : "border-border bg-night"
             }`}
           >
@@ -74,28 +84,25 @@ export function Planos() {
               <span className="font-display text-3xl font-extrabold text-off-white">R$ {p.preco}</span>
               <span className="text-sm text-muted">/mês</span>
             </p>
-            <p className="mt-1 text-sm text-muted">Até {p.cartoes}</p>
-            <div className="mt-6">
+
+            <ul className="mt-6 flex flex-col gap-3">
+              {p.beneficios.map((b) => (
+                <li key={b} className="flex items-start gap-2.5">
+                  <span className="mt-1">
+                    <CheckIcon />
+                  </span>
+                  <span className="text-sm leading-relaxed text-muted">{b}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8">
               <WhatsAppCtaButton origem={`planos_${p.nome.toLowerCase()}`} className="w-full">
                 Falar com especialista
               </WhatsAppCtaButton>
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="mt-10 rounded-xl border border-border bg-night p-7">
-        <p className="font-display text-sm font-bold text-off-white">O que vem em todos os planos</p>
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-          {FUNCIONALIDADES.map((f) => (
-            <li key={f} className="flex items-start gap-2.5">
-              <span className="mt-1">
-                <CheckIcon />
-              </span>
-              <span className="text-sm leading-relaxed text-muted">{f}</span>
-            </li>
-          ))}
-        </ul>
       </div>
     </DiagonalSection>
   )
