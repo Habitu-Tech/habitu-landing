@@ -12,7 +12,7 @@ function WhatsAppToast() {
           </svg>
         </span>
         <div>
-          <p className="text-xs font-semibold text-off-white">Restaurante Vila Verde</p>
+          <p className="text-xs font-semibold text-off-white">Seu Restaurante</p>
           <p className="mt-0.5 text-[11px] leading-snug text-muted">
             +1 selo pra você 🍽️ Faltam 4 pra sobremesa grátis!
           </p>
@@ -60,7 +60,7 @@ export function Hero() {
         <div className="relative mt-16 flex flex-col items-center">
           <div className="relative">
             <StampCard
-              negocio="Restaurante Vila Verde"
+              negocio="Seu Restaurante"
               pessoa="Marina Costa"
               filled={6}
               total={10}

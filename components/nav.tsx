@@ -3,6 +3,7 @@ import { WhatsAppCtaButton } from "@/components/whatsapp-cta-button"
 
 const LINKS = [
   { label: "Como funciona", href: "#como-funciona" },
+  { label: "Planos", href: "#planos" },
   { label: "Para quem é", href: "#para-quem" },
   { label: "Dúvidas", href: "#duvidas" },
 ]

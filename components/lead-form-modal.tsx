@@ -207,7 +207,7 @@ export function LeadFormModal({
                   required
                   value={nomeNegocio}
                   onChange={(e) => setNomeNegocio(e.target.value)}
-                  placeholder="Restaurante Vila Verde"
+                  placeholder="Restaurante Bom Sabor"
                   className="rounded-md border border-border2 bg-night px-4 py-3 text-base text-off-white placeholder:text-muted focus:border-mint focus:outline-none focus:ring-2 focus:ring-mint/20"
                 />
               </div>

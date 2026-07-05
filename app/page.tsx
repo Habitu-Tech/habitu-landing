@@ -4,7 +4,8 @@ import { TrustBar } from "@/components/trust-bar"
 import { Comparacao } from "@/components/comparacao"
 import { ComoFunciona } from "@/components/como-funciona"
 import { Manifesto } from "@/components/manifesto"
-import { ExemploPratico } from "@/components/exemplo-pratico"
+import { ProvaSocial } from "@/components/prova-social"
+import { Planos } from "@/components/planos"
 import { ParaQuem } from "@/components/para-quem"
 import { Faq } from "@/components/faq"
 import { CtaFinal } from "@/components/cta-final"
@@ -20,7 +21,8 @@ export default function Home() {
       <Comparacao />
       <ComoFunciona />
       <Manifesto />
-      <ExemploPratico />
+      <ProvaSocial />
+      <Planos />
       <ParaQuem />
       <Faq />
       <CtaFinal />

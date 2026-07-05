@@ -27,7 +27,7 @@ const PERGUNTAS = [
   {
     pergunta: "Quanto custa?",
     resposta:
-      "Depende do tamanho do seu negócio. É mais rápido a gente entender sua operação numa conversa no WhatsApp do que te jogar uma tabela de preço genérica.",
+      "Tem dois planos, Lite e Pro, com preço fixo por quantidade de cartões. Dá uma olhada na seção de planos aqui em cima da página.",
   },
 ]
 
