@@ -3,12 +3,12 @@ import { DiagonalSection } from "@/components/diagonal-section"
 
 const CLIENTES = [
   {
-    nome: "Oka Guaraná da Amazônia",
+    nome: "Oka Guaraná",
     logo: "/clients/oka-guarana.jpg",
     local: "Quiosques no Amazonas Shopping e no Parque Dez, em Manaus",
     programa: "10 guaranás = 1 grátis",
     instagram: "oka.guarana",
-    fato: 'A Oka Guaraná da Amazônia foi um dos primeiros negócios a rodar o Habbitu no balcão. Com quiosques no Amazonas Shopping e no Parque Dez, o fluxo de clientes é grande, e antes o carimbo dependia do cartãozinho de papel, que se perdia com frequência. Hoje, cada guaraná vendido gera um selo direto no celular do cliente, sem fila e sem papel. Com o programa "10 guaranás = 1 grátis", a equipe sabe exatamente quantos selos cada cliente tem, e o cliente sabe exatamente quanto falta pra ganhar o próximo.',
+    fato: 'A Oka Guaraná foi um dos primeiros negócios a rodar o Habbitu no balcão. Com quiosques no Amazonas Shopping e no Parque Dez, o fluxo de clientes é grande, e antes o carimbo dependia do cartãozinho de papel, que se perdia com frequência. Hoje, cada guaraná vendido gera um selo direto no celular do cliente, sem fila e sem papel. Com o programa "10 guaranás = 1 grátis", a equipe sabe exatamente quantos selos cada cliente tem, e o cliente sabe exatamente quanto falta pra ganhar o próximo.',
     cor: "text-mint",
     borda: "border-mint/30",
   },
