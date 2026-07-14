@@ -11,7 +11,7 @@ const NEGOCIOS = [
 
 export function ParaQuem() {
   return (
-    <DiagonalSection tone="night" id="para-quem">
+    <DiagonalSection tone="night" id="para-quem" trackingName="para_quem">
       <div className="mb-10 max-w-xl">
         <h2 className="font-display text-[clamp(1.6rem,4vw,2.4rem)] font-extrabold text-off-white">
           Se o seu cliente pode voltar, o Habbitu faz sentido

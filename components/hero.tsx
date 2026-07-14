@@ -1,6 +1,9 @@
+"use client"
+
 import { StampCard } from "@/components/stamp-card"
 import { WhatsAppCtaButton } from "@/components/whatsapp-cta-button"
 import { QrPattern } from "@/components/qr-pattern"
+import { useSectionView } from "@/lib/use-section-view"
 
 function WhatsAppToast() {
   return (
@@ -23,8 +26,10 @@ function WhatsAppToast() {
 }
 
 export function Hero() {
+  const ref = useSectionView<HTMLElement>("hero")
+
   return (
-    <section className="relative overflow-hidden px-5 pb-16 pt-16 sm:pt-24">
+    <section ref={ref} className="relative overflow-hidden px-5 pb-16 pt-16 sm:pt-24">
       <div
         className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 text-mint/[0.06] sm:h-80 sm:w-80"
         aria-hidden="true"

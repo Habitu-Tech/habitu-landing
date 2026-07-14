@@ -26,7 +26,7 @@ const CLIENTES = [
 
 export function ProvaSocial() {
   return (
-    <DiagonalSection tone="night">
+    <DiagonalSection tone="night" trackingName="prova_social">
       <div className="mb-12 max-w-xl">
         <p className="text-xs font-medium uppercase tracking-wide text-mint">Quem já usa</p>
         <h2 className="mt-2 font-display text-[clamp(1.6rem,4vw,2.4rem)] font-extrabold text-off-white">

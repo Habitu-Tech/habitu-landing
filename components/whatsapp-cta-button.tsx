@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { LeadFormModal } from "@/components/lead-form-modal"
+import { trackCtaClick } from "@/lib/gtag"
 
 function WhatsAppIcon() {
   return (
@@ -24,6 +25,11 @@ export function WhatsAppCtaButton({
 }) {
   const [open, setOpen] = useState(false)
 
+  function handleOpen() {
+    trackCtaClick(origem)
+    setOpen(true)
+  }
+
   const base =
     "inline-flex min-h-[48px] items-center justify-center gap-2 whitespace-nowrap rounded-md px-6 py-3 text-base font-semibold transition-transform active:scale-95"
   const styles =
@@ -33,7 +39,7 @@ export function WhatsAppCtaButton({
 
   return (
     <>
-      <button type="button" onClick={() => setOpen(true)} className={`${base} ${styles} ${className}`}>
+      <button type="button" onClick={handleOpen} className={`${base} ${styles} ${className}`}>
         <WhatsAppIcon />
         {children}
       </button>

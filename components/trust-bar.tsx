@@ -10,7 +10,7 @@ const ITENS = [
 
 export function TrustBar() {
   return (
-    <DiagonalSection tone="surface">
+    <DiagonalSection tone="surface" trackingName="trust_bar">
       <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
         {ITENS.map(({ Icon, label }) => (
           <div key={label} className="flex flex-col items-center gap-3 text-center sm:items-start sm:text-left">

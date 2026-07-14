@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { DiagonalSection } from "@/components/diagonal-section"
+import { trackFaqOpen } from "@/lib/gtag"
 
 const PERGUNTAS = [
   {
@@ -50,7 +51,7 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <DiagonalSection tone="surface" maxWidth="max-w-3xl" id="duvidas">
+    <DiagonalSection tone="surface" maxWidth="max-w-3xl" id="duvidas" trackingName="faq">
       <div className="mb-10 max-w-xl">
         <h2 className="font-display text-[clamp(1.6rem,4vw,2.4rem)] font-extrabold text-off-white">
           Ainda com dúvida?
@@ -67,7 +68,10 @@ export function Faq() {
             <div key={item.pergunta}>
               <button
                 type="button"
-                onClick={() => setOpenIndex(open ? null : i)}
+                onClick={() => {
+                  if (!open) trackFaqOpen(item.pergunta)
+                  setOpenIndex(open ? null : i)
+                }}
                 aria-expanded={open}
                 className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
               >

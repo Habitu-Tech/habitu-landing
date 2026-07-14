@@ -33,7 +33,7 @@ const HABBITU = [
 
 export function Comparacao() {
   return (
-    <DiagonalSection tone="night">
+    <DiagonalSection tone="night" trackingName="comparacao">
       <div className="mb-14 max-w-xl">
         <h2 className="font-display text-[clamp(1.6rem,4vw,2.4rem)] font-extrabold text-off-white">
           Fidelidade de papel, reinventada pro celular

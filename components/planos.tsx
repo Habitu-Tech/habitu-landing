@@ -53,7 +53,7 @@ function CheckIcon() {
 
 export function Planos() {
   return (
-    <DiagonalSection tone="surface" id="planos">
+    <DiagonalSection tone="surface" id="planos" trackingName="planos">
       <div className="mb-12 max-w-xl">
         <p className="text-xs font-medium uppercase tracking-wide text-mint">Planos</p>
         <h2 className="mt-2 font-display text-[clamp(1.6rem,4vw,2.4rem)] font-extrabold text-off-white">

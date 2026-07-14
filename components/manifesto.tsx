@@ -3,7 +3,7 @@ import { QrPattern } from "@/components/qr-pattern"
 
 export function Manifesto() {
   return (
-    <DiagonalSection tone="night">
+    <DiagonalSection tone="night" trackingName="manifesto">
       <div
         className="relative overflow-hidden rounded-2xl border border-mint/20 bg-surface px-6 py-14 text-center shadow-mint sm:px-10"
       >

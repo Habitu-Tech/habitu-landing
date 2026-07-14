@@ -30,7 +30,7 @@ const PASSOS = [
 
 export function ComoFunciona() {
   return (
-    <DiagonalSection tone="surface" id="como-funciona">
+    <DiagonalSection tone="surface" id="como-funciona" trackingName="como_funciona">
       <div className="mb-14 max-w-xl">
         <h2 className="font-display text-[clamp(1.6rem,4vw,2.4rem)] font-extrabold text-off-white">
           Simples pra você, direto pro cliente

@@ -10,7 +10,12 @@ import {
   isValidBrazilPhone,
   normalizeBrazilPhone,
 } from "@/lib/whatsapp"
-import { reportLeadFormConversion } from "@/lib/gtag"
+import {
+  reportLeadFormConversion,
+  trackGenerateLead,
+  trackLeadFormClose,
+  trackWhatsAppOpen,
+} from "@/lib/gtag"
 
 function CheckCircle() {
   return (
@@ -54,7 +59,7 @@ export function LeadFormModal({
     document.body.style.overflow = "hidden"
 
     function onKeyDown(e: KeyboardEvent) {
-      if (e.key === "Escape") onClose()
+      if (e.key === "Escape") handleClose()
     }
     window.addEventListener("keydown", onKeyDown)
 
@@ -63,11 +68,14 @@ export function LeadFormModal({
       window.removeEventListener("keydown", onKeyDown)
       previouslyFocused?.focus()
     }
+    // omitting handleClose: including it would re-run this effect (and re-steal focus) on every keystroke
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, onClose])
 
   if (!open) return null
 
   function handleClose() {
+    if (!enviado) trackLeadFormClose(origem)
     onClose()
     setNome("")
     setNomeNegocio("")
@@ -103,6 +111,7 @@ export function LeadFormModal({
       })
       if (!response.ok) throw new Error("save-failed")
       reportLeadFormConversion()
+      trackGenerateLead(origem, tipoNegocio)
       setEnviado(true)
     } catch {
       setErro("Não rolou salvar agora. Tenta de novo em alguns segundos.")
@@ -112,6 +121,7 @@ export function LeadFormModal({
   }
 
   function handleWhatsAppAgora() {
+    trackWhatsAppOpen(origem)
     const message = buildWhatsAppMessage(nome, nomeNegocio, tipoNegocio)
     window.open(buildWhatsAppLink(message), "_blank", "noopener,noreferrer")
   }
