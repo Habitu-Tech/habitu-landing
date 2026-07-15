@@ -19,12 +19,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Habbitu: o cartão fidelidade que não se perde",
   description:
-    "Cartão fidelidade digital pra bar, restaurante, quiosque e salão. Cliente escaneia um QR code, junta selo e ganha prêmio sem baixar app. Fale com a gente no WhatsApp.",
+    "Cartão fidelidade digital pra bar, restaurante, quiosque e salão. Cliente escaneia um QR code, junta selo e ganha prêmio sem baixar app. Crie sua conta grátis em poucos minutos.",
   metadataBase: new URL("https://habbitu.com"),
   openGraph: {
     title: "Habbitu: o cartão fidelidade que não se perde",
     description:
-      "Cliente escaneia um QR code, junta selo e ganha prêmio sem baixar app. Fale com a gente no WhatsApp.",
+      "Cliente escaneia um QR code, junta selo e ganha prêmio sem baixar app. Crie sua conta grátis em poucos minutos.",
     url: "https://habbitu.com",
     siteName: "Habbitu",
     locale: "pt_BR",

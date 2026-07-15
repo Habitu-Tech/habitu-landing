@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { WhatsAppCtaButton } from "@/components/whatsapp-cta-button"
+import { SignupCtaButton } from "@/components/signup-cta-button"
 
 const LINKS = [
   { label: "Como funciona", href: "#como-funciona" },
@@ -24,9 +24,9 @@ export function Nav() {
             </a>
           ))}
         </div>
-        <WhatsAppCtaButton origem="nav" className="!px-3 !py-2 !text-xs sm:!px-4 sm:!text-sm">
-          Falar com especialista
-        </WhatsAppCtaButton>
+        <SignupCtaButton origem="nav" className="!px-3 !py-2 !text-xs sm:!px-4 sm:!text-sm">
+          Criar conta grátis
+        </SignupCtaButton>
       </div>
     </nav>
   )

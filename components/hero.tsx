@@ -1,7 +1,7 @@
 "use client"
 
 import { StampCard } from "@/components/stamp-card"
-import { WhatsAppCtaButton } from "@/components/whatsapp-cta-button"
+import { SignupCtaButton } from "@/components/signup-cta-button"
 import { QrPattern } from "@/components/qr-pattern"
 import { useSectionView } from "@/lib/use-section-view"
 
@@ -53,7 +53,7 @@ export function Hero() {
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <WhatsAppCtaButton origem="hero">Falar com especialista agora</WhatsAppCtaButton>
+          <SignupCtaButton origem="hero">Criar conta grátis</SignupCtaButton>
           <a
             href="#como-funciona"
             className="inline-flex min-h-[48px] items-center justify-center rounded-md border border-border2 px-6 py-3 text-base font-medium text-off-white transition-colors hover:border-mint"

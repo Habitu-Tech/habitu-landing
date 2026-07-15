@@ -57,7 +57,7 @@ export function Faq() {
           Ainda com dúvida?
         </h2>
         <p className="mt-3 leading-relaxed text-muted">
-          Se não responder aqui, é só perguntar direto no WhatsApp.
+          Se não responder aqui, é só mandar um e-mail pra contato@habbitu.com.
         </p>
       </div>
 

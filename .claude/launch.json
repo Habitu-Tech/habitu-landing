@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "habitu-landing-dev",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["dev", "-p", "3001"],
+      "port": 3001
+    }
+  ]
+}

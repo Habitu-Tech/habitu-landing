@@ -1,36 +1,42 @@
 import { DiagonalSection } from "@/components/diagonal-section"
-import { WhatsAppCtaButton } from "@/components/whatsapp-cta-button"
+import { SignupCtaButton } from "@/components/signup-cta-button"
 
 const PLANOS = [
   {
     nome: "Gratuito",
+    plano: undefined,
     preco: "0",
+    cta: "Começar grátis",
     beneficios: [
       "Uma campanha de teste",
-      "Emita até 10 cartões de teste",
-      "Teste pelo tempo que precisar",
+      "Emita até 10 cartões por mês",
+      "Mensagens ilimitadas",
       "Não precisa de cartão de crédito",
     ],
     destaque: false,
   },
   {
     nome: "Lite",
+    plano: "lite" as const,
     preco: "24",
+    cta: "Assinar Lite",
     beneficios: [
       "Uma campanha",
-      "Emita até 200 cartões",
-      "Envio de mensagens",
+      "Emita até 500 cartões por mês",
+      "Mensagens ilimitadas",
       "Cancele quando quiser, sem multas",
     ],
     destaque: false,
   },
   {
     nome: "Pro",
+    plano: "pro" as const,
     preco: "49",
+    cta: "Assinar Pro",
     beneficios: [
       "Uma campanha",
-      "Emita até 500 cartões",
-      "Envio de mensagens",
+      "Emita até 3000 cartões por mês",
+      "Mensagens ilimitadas",
       "Cancele quando quiser, sem multas",
     ],
     destaque: true,
@@ -97,9 +103,9 @@ export function Planos() {
             </ul>
 
             <div className="mt-8">
-              <WhatsAppCtaButton origem={`planos_${p.nome.toLowerCase()}`} className="w-full">
-                Falar com especialista
-              </WhatsAppCtaButton>
+              <SignupCtaButton origem={`planos_${p.nome.toLowerCase()}`} plano={p.plano} className="w-full">
+                {p.cta}
+              </SignupCtaButton>
             </div>
           </div>
         ))}

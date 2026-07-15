@@ -1,4 +1,4 @@
-import { WhatsAppCtaButton } from "@/components/whatsapp-cta-button"
+import { SignupCtaButton } from "@/components/signup-cta-button"
 import { QrPattern } from "@/components/qr-pattern"
 import { DiagonalSection } from "@/components/diagonal-section"
 
@@ -17,11 +17,11 @@ export function CtaFinal() {
             Vamos ver se faz sentido pro seu negócio?
           </h2>
           <p className="mx-auto mt-3 max-w-sm leading-relaxed text-muted">
-            Sem formulário longo, sem contrato na hora. É uma conversa no WhatsApp pra entender
-            como o Habbitu se encaixa no seu dia a dia.
+            Crie sua conta grátis agora e comece a fidelizar seus clientes em poucos minutos,
+            sem cartão de crédito.
           </p>
           <div className="mt-8 flex justify-center">
-            <WhatsAppCtaButton origem="cta_final">Falar com especialista</WhatsAppCtaButton>
+            <SignupCtaButton origem="cta_final">Criar conta grátis</SignupCtaButton>
           </div>
         </div>
       </div>
