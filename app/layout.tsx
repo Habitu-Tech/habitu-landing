@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     title: "Habbitu: o cartão fidelidade que não se perde",
     description: "Cliente escaneia um QR code, junta selo e ganha prêmio sem baixar app.",
   },
+  verification: {
+    other: {
+      "facebook-domain-verification": "8anbzd93qk36fd5skzonk7j6lv8pdr",
+    },
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
